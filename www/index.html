@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            window.open = cordova.InAppBrowser.open('http://apache.org', '_self', 'location=yes');
+        }
+    </script>
+</head>
+<body>
+	<br />
+    This is a template for Monaca app.
+    <div>
+    <button onclick="cordova.InAppBrowser.open('http://apache.org', '_self', 'location=yes');alert('hi');var ref = cordova.InAppBrowser.open('http://apache.org', '_self', 'location=no');ref.show();">Say something</button>
+
+    
+    </div>
+</body>
+</html>
